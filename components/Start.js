@@ -6,6 +6,8 @@ import {
   TextInput,
   ImageBackground,
   TouchableOpacity,
+  Platform,
+  KeyboardAvoidingView,
 } from "react-native";
 
 const image = require("../media/Background_Image.png");
@@ -78,6 +80,13 @@ const Start = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </ImageBackground>
+      {Platform.OS === "android" ? ( // to avoid keyboard hides the message input field in android
+        <KeyboardAvoidingView behavior="height" />
+      ) : null}
+
+      {Platform.OS === "ios" ? ( // to avoid keyboard hides the message input field in ios
+        <KeyboardAvoidingView behavior="padding" />
+      ) : null}
     </View>
   );
 };
