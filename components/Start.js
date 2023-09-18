@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getAuth, signInAnonymously } from "firebase/auth";
 import {
   StyleSheet,
   View,
@@ -8,6 +9,7 @@ import {
   TouchableOpacity,
   Platform,
   KeyboardAvoidingView,
+  Alert,
 } from "react-native";
 
 const image = require("../media/Background_Image.png");
@@ -22,6 +24,22 @@ const backgroundColors = {
 const Start = ({ navigation }) => {
   const [name, setName] = useState("");
   const [color, setColor] = useState(backgroundColors.c);
+  const auth = getAuth();
+
+  const signInUser = () => {
+    signInAnonymously(auth)
+      .then((result) => {
+        navigation.navigate("Chat", {
+          userID: result.user.uid,
+          name: name,
+          color: color,
+        });
+        Alert.alert("Signed in Successfully!");
+      })
+      .catch((error) => {
+        Alert.alert("Unable to sign in, try later again.");
+      });
+  };
 
   return (
     <View style={styles.container}>
@@ -70,21 +88,13 @@ const Start = ({ navigation }) => {
               onPress={() => setColor(backgroundColors.d)}
             ></TouchableOpacity>
           </View>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() =>
-              navigation.navigate("Chat", { name: name, color: color })
-            }
-          >
+          <TouchableOpacity style={styles.button} onPress={signInUser}>
             <Text style={styles.buttonText}>Start Chatting</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
-      {Platform.OS === "android" ? ( // to avoid keyboard hides the message input field in android
-        <KeyboardAvoidingView behavior="height" />
-      ) : null}
-
-      {Platform.OS === "ios" ? ( // to avoid keyboard hides the message input field in ios
+      {/* // to avoid keyboard hides the message input field in ios */}
+      {Platform.OS === "ios" ? (
         <KeyboardAvoidingView behavior="padding" />
       ) : null}
     </View>
