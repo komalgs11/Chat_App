@@ -97,6 +97,9 @@ const Start = ({ navigation }) => {
       {Platform.OS === "ios" ? (
         <KeyboardAvoidingView behavior="padding" />
       ) : null}
+      {Platform.OS === "android" ? ( // to avoid keyboard hides the message input field in android
+        <KeyboardAvoidingView behavior="height" />
+      ) : null}
     </View>
   );
 };

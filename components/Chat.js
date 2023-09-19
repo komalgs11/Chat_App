@@ -32,6 +32,8 @@ const Chat = ({ route, navigation, db }) => {
   };
 
   useEffect(() => {
+    navigation.setOptions({ title: name });
+
     const q = query(collection(db, "messages"), orderBy("createdAt", "desc"));
     const unsubMessages = onSnapshot(q, (docs) => {
       let newMessages = [];
@@ -47,10 +49,6 @@ const Chat = ({ route, navigation, db }) => {
     return () => {
       if (unsubMessages) unsubMessages();
     };
-  }, []);
-
-  useEffect(() => {
-    navigation.setOptions({ title: name });
   }, []);
 
   const renderBubble = (props) => {
@@ -83,6 +81,9 @@ const Chat = ({ route, navigation, db }) => {
       {/* // to avoid keyboard hides the message input field in ios */}
       {Platform.OS === "ios" ? (
         <KeyboardAvoidingView behavior="padding" />
+      ) : null}
+      {Platform.OS === "android" ? ( // to avoid keyboard hides the message input field in android
+        <KeyboardAvoidingView behavior="height" />
       ) : null}
     </View>
   );
