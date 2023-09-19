@@ -13,9 +13,6 @@ const Stack = createNativeStackNavigator();
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-import { LogBox } from "react-native";
-LogBox.ignoreLogs(["AsyncStorage has been extracted from"]);
-
 const App = () => {
   // web app's Firebase configuration
   const firebaseConfig = {
