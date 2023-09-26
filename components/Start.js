@@ -89,7 +89,7 @@ const Start = ({ navigation }) => {
             ></TouchableOpacity>
           </View>
           <TouchableOpacity style={styles.button} onPress={signInUser}>
-            <Text style={styles.buttonText}>Start Chatting</Text>
+            <Text style={styles.buttonText}>Go To Chat</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   },
   selectedCircle: {
     borderWidth: 2,
-    borderColor: "#FF0000",
+    borderColor: "#FFFFFF",
   },
   button: {
     backgroundColor: "#757083",
