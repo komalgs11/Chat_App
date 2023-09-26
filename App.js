@@ -17,10 +17,12 @@ import {
   enableNetwork,
 } from "firebase/firestore";
 
+import { getStorage } from "firebase/storage";
+
 // useNetInfo to check whether user is online or not
 import { useNetInfo } from "@react-native-community/netinfo";
 import { useEffect } from "react";
-import { LogBox, Alert } from "react-native";
+import { Alert } from "react-native";
 
 const App = () => {
   const connectionStatus = useNetInfo();
@@ -50,6 +52,7 @@ const App = () => {
 
   // Initialize Cloud Firestore and get a reference to the service
   const db = getFirestore(app);
+  const storage = getStorage(app);
 
   return (
     <NavigationContainer>
@@ -60,6 +63,7 @@ const App = () => {
             <Chat
               isConnected={connectionStatus.isConnected}
               db={db}
+              storage={storage}
               {...props}
             />
           )}
