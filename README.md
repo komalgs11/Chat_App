@@ -20,4 +20,5 @@ before joining the chat.
 - simulator , Emulator
 - Firebase cloud storage
 
+![Uploading Simulator Screenshot - iPhone 15 Pro Max - 2023-09-27 at 00.06.07 (1).jpg…]()
 
