@@ -20,3 +20,6 @@ before joining the chat.
 - simulator , Emulator
 - Firebase cloud storage
 
+## ScreenShots
+
+![Simulator Screenshot - iPhone 15 Pro Max - 2023-09-27 at 00 06 07](https://github.com/komalgs11/Chat_App/assets/126813272/2a52a799-c71c-44d6-99d2-131274f3a924)
