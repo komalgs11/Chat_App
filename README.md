@@ -21,3 +21,8 @@ before joining the chat.
 - Firebase cloud storage
 
 ## ScreenShots
+
+![Simulator Screenshot - iPhone 15 Pro Max - 2023-09-27 at 00 06 07](https://github.com/komalgs11/Chat_App/assets/126813272/787a4c03-f66a-4cdc-abc8-1f6864f77673)
+
+![Simulator Screenshot - iPhone 15 Pro Max - 2023-09-26 at 23 21 24](https://github.com/komalgs11/Chat_App/assets/126813272/87367168-ab35-4f05-83cb-6369c7daf77a)
+
