@@ -22,9 +22,11 @@ before joining the chat.
 
 ## ScreenShots
 
-<img width="342" alt="Screenshot 2023-10-02 at 12 29 17" src="https://github.com/komalgs11/Chat_App/assets/126813272/d9f31387-0819-4f2d-9bf3-b32ed81517bf">
+<img width="328" alt="Screenshot 2023-10-02 at 12 29 17" src="https://github.com/komalgs11/Chat_App/assets/126813272/86735ed6-2503-4e6d-8cca-ff9fca2a9b31">
 
-<img width="342" alt="Screenshot 2023-10-02 at 12 28 14" src="https://github.com/komalgs11/Chat_App/assets/126813272/8cba906f-818b-4f47-b1ef-8d20eb36aebd">
+
+<img width="331" alt="Screenshot 2023-10-02 at 12 28 14" src="https://github.com/komalgs11/Chat_App/assets/126813272/f082670b-1602-4f3a-921c-c88ae02eca25">
+
 
 
 
