@@ -16,9 +16,9 @@ before joining the chat.
 
 - React Native
 - Expo
-- React
-- simulator , Emulator
-- Firebase cloud storage
+- React.js
+- simulator , Emulator , Xcode
+- Firebase cloud storage (firestore).
 
 ## ScreenShots
 
