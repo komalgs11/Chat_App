@@ -16,7 +16,6 @@ before joining the chat.
 
 - React Native
 - Expo
-- React.js
 - simulator , Emulator , Xcode
 - Firebase cloud storage (firestore).
 
